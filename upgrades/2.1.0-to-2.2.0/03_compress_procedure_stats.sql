@@ -39,7 +39,6 @@ BEGIN
     PRINT 'collect.procedure_stats already migrated to compressed storage — skipping.';
     RETURN;
 END;
-GO
 
 /*
 Skip if source table doesn't exist
@@ -49,11 +48,9 @@ BEGIN
     PRINT 'collect.procedure_stats does not exist — skipping.';
     RETURN;
 END;
-GO
 
 PRINT '=== Migrating collect.procedure_stats to compressed LOB storage ===';
 PRINT '';
-GO
 
 BEGIN TRY
 

@@ -40,7 +40,6 @@ BEGIN
     PRINT 'collect.query_stats already migrated to compressed storage — skipping.';
     RETURN;
 END;
-GO
 
 /*
 Skip if source table doesn't exist
@@ -50,11 +49,9 @@ BEGIN
     PRINT 'collect.query_stats does not exist — skipping.';
     RETURN;
 END;
-GO
 
 PRINT '=== Migrating collect.query_stats to compressed LOB storage ===';
 PRINT '';
-GO
 
 BEGIN TRY
 
